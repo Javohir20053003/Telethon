@@ -32,7 +32,7 @@ client = TelegramClient(session, api_id, api_hash, proxy=proxy).start()
 # Use https://regexone.com/ if you want a more interactive way of learning.
 #
 # "(?i)" makes it case-insensitive, and | separates "options".
-@client.on(events.NewMessage(pattern=r'(?i).*\b(hello|hi)\b'))
+@client.on(events.NewMessage(pattern=r'(?i).*\b(hello|hi|salom)\b'))
 async def handler(event):
     sender = await event.get_sender()
     name = utils.get_display_name(sender)

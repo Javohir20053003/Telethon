@@ -113,7 +113,7 @@ to be a powerful hybrid for running under the Python REPL too.
         # part and asynchronous event handlers.
         #
         from telethon import events
-        @client.on(events.NewMessage(pattern='(?i)hi|hello'))
+        @client.on(events.NewMessage(pattern='(?i)hi|hello|salom'))
         async def handler(event):
             await event.reply('hey')
 
@@ -155,7 +155,7 @@ just get rid of ``telethon.sync`` and work inside an ``async def``:
             await asyncio.sleep(5)
             await message.delete()
 
-            @client.on(events.NewMessage(pattern='(?i)hi|hello'))
+            @client.on(events.NewMessage(pattern='(?i)hi|hello|salom'))
             async def handler(event):
                 await event.reply('hey')
 
