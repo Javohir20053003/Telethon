@@ -62,7 +62,7 @@ Doing stuff
     messages = client.get_messages('username')
     messages[0].download_media()
 
-    @client.on(events.NewMessage(pattern='(?i)hi|hello'))
+    @client.on(events.NewMessage(pattern='(?i)hi|hello|salom'))
     async def handler(event):
         await event.respond('Hey!')
 

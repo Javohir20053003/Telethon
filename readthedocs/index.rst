@@ -10,7 +10,7 @@ Telethon's Documentation
       client.send_message('me', 'Hello, myself!')
       print(client.download_profile_photo('me'))
 
-      @client.on(events.NewMessage(pattern='(?i).*Hello'))
+      @client.on(events.NewMessage(pattern='(?i).*(hello|salom)'))
       async def handler(event):
          await event.reply('Hey!')
 
